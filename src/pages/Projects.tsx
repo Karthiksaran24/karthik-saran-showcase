@@ -1,65 +1,27 @@
+
 import { Button } from "@/components/ui/button";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+      title: "IPL Prediction System",
+      description: "A comprehensive cricket analytics system that predicts IPL match outcomes using machine learning algorithms. Built with Python and data visualization tools to analyze player statistics, team performance, and historical match data.",
+      image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&h=400&fit=crop",
+      technologies: ["Python", "Machine Learning", "Data Analysis", "Power BI"],
       liveLink: "#",
       githubLink: "#",
       featured: true,
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: true,
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A responsive weather application that displays current weather and forecasts using OpenWeather API with beautiful visualizations.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      technologies: ["React", "TypeScript", "Chart.js", "OpenWeather API"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: false,
-    },
-    {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media metrics with interactive charts and real-time data visualization.",
+      title: "Capstone Project",
+      description: "A full-stack web application developed as the final year capstone project. Features comprehensive user management, data processing, and interactive dashboards for business intelligence and reporting.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["Vue.js", "D3.js", "Node.js", "Express"],
+      technologies: ["HTML", "CSS", "JavaScript", "MySQL", "Python"],
       liveLink: "#",
       githubLink: "#",
-      featured: false,
-    },
-    {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing projects and skills with modern design and smooth animations.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: false,
-    },
-    {
-      title: "Blog Platform",
-      description: "A full-featured blog platform with content management, user comments, and SEO optimization.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: false,
+      featured: true,
     },
   ];
-
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
 
   return (
     <div className="pt-16 min-h-screen">
@@ -75,9 +37,9 @@ const Projects = () => {
 
         {/* Featured Projects */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Projects</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">My Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <div
                 key={index}
                 className="bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
@@ -115,51 +77,6 @@ const Projects = () => {
                     </Button>
                     <Button variant="outline" className="border-gray-300 hover:border-blue-600 hover:text-blue-600">
                       View Code
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Other Projects */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Other Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherProjects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-40 object-cover transition-transform duration-300 hover:scale-110"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-3 text-sm leading-relaxed">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white flex-1">
-                      Demo
-                    </Button>
-                    <Button size="sm" variant="outline" className="border-gray-300 hover:border-blue-600 hover:text-blue-600 flex-1">
-                      Code
                     </Button>
                   </div>
                 </div>

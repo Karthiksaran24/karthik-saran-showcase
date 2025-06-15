@@ -4,34 +4,19 @@ const Skills = () => {
     {
       title: "Frontend Development",
       skills: [
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "JavaScript", level: 95 },
-        { name: "HTML/CSS", level: 90 },
-        { name: "Tailwind CSS", level: 85 },
-        { name: "Next.js", level: 80 },
+        { name: "HTML/CSS", level: 95 },
+        { name: "JavaScript", level: 85 },
+        { name: "React", level: 80 },
+        { name: "Tailwind CSS", level: 75 },
       ],
     },
     {
-      title: "Backend Development",
+      title: "Data & Analytics",
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "Express.js", level: 85 },
-        { name: "MongoDB", level: 75 },
-        { name: "PostgreSQL", level: 70 },
-        { name: "REST APIs", level: 90 },
-      ],
-    },
-    {
-      title: "Tools & Technologies",
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 70 },
-        { name: "AWS", level: 65 },
-        { name: "Firebase", level: 80 },
-        { name: "Figma", level: 75 },
-        { name: "VS Code", level: 95 },
+        { name: "Python", level: 85 },
+        { name: "Excel", level: 90 },
+        { name: "MySQL", level: 80 },
+        { name: "Power BI", level: 75 },
       ],
     },
   ];
@@ -48,7 +33,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
@@ -86,13 +71,11 @@ const Skills = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               "Problem Solving",
-              "Team Leadership",
-              "Agile Development",
-              "UI/UX Design",
-              "Mobile Development",
-              "Machine Learning",
-              "DevOps",
-              "Testing",
+              "Data Analysis",
+              "Statistical Modeling",
+              "Data Visualization",
+              "Database Design",
+              "Business Intelligence",
             ].map((skill) => (
               <span
                 key={skill}

@@ -3,10 +3,10 @@ const Education = () => {
   const education = [
     {
       degree: "Bachelor of Technology in Computer Science",
-      institution: "ABC University",
-      location: "Chennai, India",
+      institution: "KGISL Institute of Technology",
+      location: "Coimbatore, India",
       year: "2020 - 2024",
-      grade: "CGPA: 8.5/10",
+      grade: "First Class",
       description: "Specialized in software engineering, algorithms, and data structures. Completed capstone project on web application development.",
       achievements: [
         "Dean's List for 3 consecutive semesters",
@@ -16,37 +16,16 @@ const Education = () => {
     },
     {
       degree: "Higher Secondary Certificate (12th Grade)",
-      institution: "XYZ Higher Secondary School",
-      location: "Chennai, India",
+      institution: "Point Calimere International School CBSE",
+      location: "Nagapattinam, India",
       year: "2018 - 2020",
-      grade: "Percentage: 92%",
+      grade: "First Class",
       description: "Science stream with Computer Science, Mathematics, and Physics. Strong foundation in programming and analytical thinking.",
       achievements: [
         "School topper in Computer Science",
         "Participated in state-level coding competitions",
         "Led the school programming club",
       ],
-    },
-  ];
-
-  const certifications = [
-    {
-      name: "Full Stack Web Development",
-      provider: "Coursera",
-      year: "2023",
-      description: "Comprehensive course covering MERN stack development",
-    },
-    {
-      name: "AWS Cloud Practitioner",
-      provider: "Amazon Web Services",
-      year: "2023",
-      description: "Cloud computing fundamentals and AWS services",
-    },
-    {
-      name: "React Developer Certification",
-      provider: "Meta",
-      year: "2022",
-      description: "Advanced React concepts and best practices",
     },
   ];
 
@@ -58,7 +37,7 @@ const Education = () => {
             My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Education</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            My academic journey and continuous learning path
+            My academic journey and learning path
           </p>
         </div>
 
@@ -97,26 +76,6 @@ const Education = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Certifications Section */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Certifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{cert.name}</h3>
-                  <p className="text-blue-600 font-semibold mb-2">{cert.provider}</p>
-                  <p className="text-gray-500 text-sm mb-4">{cert.year}</p>
-                  <p className="text-gray-700 text-sm leading-relaxed">{cert.description}</p>
                 </div>
               </div>
             ))}
